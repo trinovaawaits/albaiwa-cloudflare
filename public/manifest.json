@@ -1,0 +1,11 @@
+{
+  "name": "Al-Bai' Wa Al-Shiraa",
+  "short_name": "Albai Shiraa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A3836",
+  "theme_color": "#0E5552",
+  "icons": [
+    { "src": "/assets/albaiwa-mark.png", "sizes": "460x460", "type": "image/png" }
+  ]
+}
