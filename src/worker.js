@@ -26,6 +26,7 @@ const SECURITY = {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname === '/api/envcheck') return Response.json({ SUPABASE_URL: !!env.SUPABASE_URL, SUPABASE_SERVICE_KEY: !!env.SUPABASE_SERVICE_KEY, SESSION_SECRET: !!env.SESSION_SECRET, GEMINI_API_KEY: !!env.GEMINI_API_KEY, OWNER_USERNAME: !!env.OWNER_USERNAME, OWNER_PASSWORD: !!env.OWNER_PASSWORD });
     const mod = routes[url.pathname];
     if (mod) {
       const name = 'onRequest' + request.method.charAt(0) + request.method.slice(1).toLowerCase();
